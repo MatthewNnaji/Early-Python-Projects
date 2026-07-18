@@ -1,9 +1,13 @@
+#======<<Input>>========================================
 import random as r
 import time
 cstreak = 0
 hstreak = 0
 user = "Mango"
-Egypt1 = "Khalas"
+
+freshset=input("Set a password to access the arcade: ")
+Egypt1 = freshset
+#=====------------=======================================
 
 
 
@@ -376,7 +380,6 @@ def cup_game(cups=3):
 
 
 #======<<Output>>========================================
-freshset=input("Set a password to access the arcade: ")        
 login()
 #=====------------=======================================
                 
