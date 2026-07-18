@@ -1,6 +1,6 @@
 full_dot = '●'
 empty_dot = '○'
-
+refresh=0
 
 def create_character(name,strength,intel,charisma):
 
