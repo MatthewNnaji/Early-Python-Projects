@@ -1,5 +1,5 @@
 # Early Python Projects
-Record of beginner projects (on [freecodecamp.com](https://www.freecodecamp.org/matthewnnaji))
+Record of beginner projects (on [freecodecamp.com](https://www.freecodecamp.org/matthewnnaji)), or projects done for fun
 
 
 <p align="center">
