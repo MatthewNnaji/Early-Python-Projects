@@ -97,8 +97,9 @@ def login():
                 while Resetter != "A1B2C3":
                     time.sleep(5)
                     Resetter=(str(input('Entered too many incorrect requests. Enter "A1B2C3" to reset password. ')))
-                if Resetter =="A1B2C3":  
-                    resetpassword()
+                    if Resetter =="A1B2C3":  
+                        resetpassword()
+
 	
     print(r"""	
 =================================================
@@ -185,7 +186,7 @@ def interface(borrowUser="Mango"):
  Select game: [1] Cups | [2] Coming soon! | [X] Logout""")
     choice2 = input(f"Welcome back, {borrowUser}! Please select one of our available games to play, or type 'X' to logout! :)  ")
     choice2 = choice2.upper()
-    while choice2!= "X" and choice2 != "1":
+    while choice2.upper != "X" and choice2 != "1":
         time.sleep(0.05)
         print("")
         print(choice2)
@@ -344,6 +345,11 @@ def cup_game(cups=3):
 
             
         while len(dList) > 3:
+			while y > cups:
+				y=int(input(f"The number of cups you selected was {cups}, try again. Choose from ({display}): ")) 
+            while str(y) not in dList:
+                y=int(input(f"Try again, you have already guessed this cup. Choose from ({display}): "))            
+
             dList.remove(str(y))
             display = ""            
             for i in range (1,len(dList)-1):
@@ -363,7 +369,12 @@ def cup_game(cups=3):
             
     dList.remove(str(z))
     display = f"{dList[0]} or {dList[1]}"             
-    y=int(input(f"You guessed wrong! Have one, FINAL try. Enter your guess, ({display}): "))  
+    y=int(input(f"You guessed wrong! Have one, FINAL try. Enter your guess, ({display}): "))
+    while y > cups:
+        y=int(input(f"The number of cups you selected was {cups}, try again. Choose from ({display}): ")) 
+    while str(y) not in dList:
+        y=int(input(f"Try again, you have already guessed this cup. Choose from ({display}): "))    
+ 
     if y != ball:
             print(f"You guessed wrong! The ball was in cup number {ball}... Better luck next time!")
             cstreak=0
@@ -382,7 +393,3 @@ def cup_game(cups=3):
 #======<<Output>>========================================
 login()
 #=====------------=======================================
-                
-
- 
-                                          
