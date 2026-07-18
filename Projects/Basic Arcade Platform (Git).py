@@ -45,7 +45,7 @@ def login():
 
         
 
-    def loginschema(base="Khalas"):
+    def loginschema(base=freshset):
         global user
         time.sleep(0.5)
         print(r"""
@@ -375,7 +375,8 @@ def cup_game(cups=3):
                                  
 
 
-#======<<Output>>========================================           
+#======<<Output>>========================================
+freshset=input("Set a password to access the arcade: ")        
 login()
 #=====------------=======================================
                 
