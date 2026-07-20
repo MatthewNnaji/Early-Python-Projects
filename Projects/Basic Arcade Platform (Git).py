@@ -1,3 +1,4 @@
+
 #======<<Input>>========================================
 import random as r
 import time
@@ -99,7 +100,6 @@ def login():
                     Resetter=(str(input('Entered too many incorrect requests. Enter "A1B2C3" to reset password. ')))
                     if Resetter =="A1B2C3":  
                         resetpassword()
-
 	
     print(r"""	
 =================================================
@@ -263,6 +263,8 @@ def cup_intro():
         cup_game()
     while ncup < 0:
         ncup=int(input("Cup number must be positive, please try again: "))
+    while ncup == 1:
+        ncup=int(input("Invalid cup number. Cup number must be greater than one, please try again: "))
     cup_game(ncup)
 
 
@@ -310,17 +312,20 @@ def cup_looper(result):
 def cup_game(cups=3):
     global cstreak,hstreak
     time.sleep(0.8)
+    print("""
+
+
+""")
     display = ""
-    dList = list(display)
+    dCollect = ""
     ball = r.randint(1, cups)
     for i in range (1,cups-1):
-        dList += str(i)
+        dCollect += str(i) + "-"
         display += str ( i)+", "
-        print(" ")
     display += f"{cups-1} or {cups}"    
-    dList += str(cups-1)  
-    dList += str(cups)
-    print(" ")
+    dCollect += str(cups-1) + "-" + str(cups)
+    dList=dCollect.split("-")
+    
     y = int(input(f"Enter your guess, ({display}): "))
     while y > cups:
         y=int(input(f"The number of cups you selected was {cups}, try again. Choose from ({display}): ")) 
@@ -339,24 +344,29 @@ def cup_game(cups=3):
             z = y
             y = ball
         while y > cups:
+            print("")
             y=int(input(f"The number of cups you selected was {cups}, try again. Choose from ({display}): ")) 
         while str(y) not in dList:
+            print("")
             y=int(input(f"Try again, you have already guessed this cup. Choose from ({display}): "))
 
             
         while len(dList) > 3:
-			while y > cups:
-				y=int(input(f"The number of cups you selected was {cups}, try again. Choose from ({display}): ")) 
+            while y > cups:
+                print("")
+                y=int(input(f"The number of cups you selected was {cups}, try again. Choose from ({display}): ")) 
             while str(y) not in dList:
+                print("")
                 y=int(input(f"Try again, you have already guessed this cup. Choose from ({display}): "))            
-
             dList.remove(str(y))
             display = ""            
             for i in range (1,len(dList)-1):
                 display += dList[i-1]+", "
             display += f"{dList[-2]} or {dList[-1]}"
+            print("")
             y=int(input(f"You guessed wrong! Have one more try. Enter your guess, ({display}): "))
             if y == ball:
+                print("")
                 print("You guessed right! Well done!")
                 cstreak+= 1
                 if cstreak > hstreak:
@@ -374,7 +384,6 @@ def cup_game(cups=3):
         y=int(input(f"The number of cups you selected was {cups}, try again. Choose from ({display}): ")) 
     while str(y) not in dList:
         y=int(input(f"Try again, you have already guessed this cup. Choose from ({display}): "))    
- 
     if y != ball:
             print(f"You guessed wrong! The ball was in cup number {ball}... Better luck next time!")
             cstreak=0
@@ -393,3 +402,7 @@ def cup_game(cups=3):
 #======<<Output>>========================================
 login()
 #=====------------=======================================
+                
+
+ 
+                                          
