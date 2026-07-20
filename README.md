@@ -5,7 +5,7 @@ Record of beginner projects (on [freecodecamp.com](https://www.freecodecamp.org/
 ###  
 
 <p align="center">
-  <img src="Images\image.png" alt="Picture of Sky Island" width="250">
+  <img src="Images\image.png" alt="Picture of sky island" width="250">
 </p>
 
 
