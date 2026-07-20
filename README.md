@@ -20,4 +20,4 @@ Record of beginner projects (on [freecodecamp.com](https://www.freecodecamp.org/
 <img width="503" height="411" alt="image showing visually how to download repository, a visual representations of the aforementioned instructions." src="https://github.com/user-attachments/assets/a592d426-df7b-4c63-a851-5752fa1500f5" />
 </p>
 
-*<i> recommend running files in python IDLE <\i>
+*<i> recommend running files in python IDLE
