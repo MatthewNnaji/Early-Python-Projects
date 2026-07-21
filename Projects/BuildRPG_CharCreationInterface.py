@@ -45,7 +45,7 @@ STR {(full_dot+" ")*7}"
 
 """)
 
-
+print(" What is the role of a Data Analyst")
 user_role = "Data Analyst"
 weekly_hours = 35
 project_name = "Alpha"
