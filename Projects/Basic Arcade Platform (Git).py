@@ -294,6 +294,10 @@ def cup_game(cups=3):
         if cstreak > hstreak:
             hstreak = cstreak
         cup_looper(True)
+    elif cups == 2 and y != ball:
+        print(f"You guessed wrong! The ball was in cup number {ball}... Better luck next time!")
+        cstreak=0
+        cup_looper(False)
 
             
     while y != ball:
