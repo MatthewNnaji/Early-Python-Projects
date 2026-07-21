@@ -1,4 +1,4 @@
-# Early Python Projects
+# 🐍 Early Python Projects
 Record of beginner projects (on [freecodecamp](https://www.freecodecamp.org/matthewnnaji)), or projects done for fun. To find the projects, open the "[Projects](https://github.com/MatthewNnaji/Early-Python-Projects/tree/main/Projects)" folder.
 
 ###  
