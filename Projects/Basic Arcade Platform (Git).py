@@ -145,6 +145,17 @@ def login():
 
 def interface(borrowUser="Mango"):
     time.sleep(1)
+    
+    
+    def shuttingdown():
+        print("Signing out, please wait...")
+        time.sleep(5)
+        print("Successfully signed out. Returning to startup screen..")
+        time.sleep(1.5)
+        login()
+        
+        
+        
     print(r"""
  ----------------------------------------------------------------
                   .-'''-.                                         
@@ -164,22 +175,30 @@ def interface(borrowUser="Mango"):
  Select game: [1] Cups | [2] Coming soon! | [X] Logout""")
     choice2 = input(f"Welcome back, {borrowUser}! Please select one of our available games to play, or type 'X' to logout! :)  ")
     choice2 = choice2.upper()
-    while choice2.upper != "X" and choice2 != "1":
-        time.sleep(0.05)
-        print("")
-        print(choice2)
-        time.sleep(0.05)
-        choice2 = input("Unfortunately we only have the cups game available at this time. Please enter another number, remembering only positive integers are valid: ")
-    if choice2 == 'X':
-        print("Signing out, please wait...")
-        time.sleep(5)
-        print("Successfully signed out. Returning to startup screen..")
-        time.sleep(1.5)
-        login()
+    if choice2 == 'X' or choice2 == 'x':
+        shuttingdown()
     elif int(choice2) == 1:
         print("Understood! Loading the cup game....")
         time.sleep(1)
         cup_intro()
+    else:
+        while choice2 != "X" and choice2 != '1' and choice2 != 'x':
+            time.sleep(0.05)
+            print("")
+            time.sleep(0.05)
+            choice2 = input("Unfortunately we only have the cups game available at this time. Please enter another number, remembering only positive integers are valid: ")
+        
+        if choice2 == 'X' or choice2 == 'x':
+            shuttingdown()
+        elif int(choice2) == 1:
+            print("Understood! Loading the cup game....")
+            time.sleep(1)
+            cup_intro()
+        
+
+           
+
+    
     
     
     
