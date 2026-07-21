@@ -2,7 +2,7 @@ full_dot = '●'
 empty_dot = '○'
 refresh=0
 
-def create_character(name,strength,intel,charisma):
+def create_character(name="ハルジオン",strength=1,intel=2,charisma=4):
 
     #Char Name verification
     if not isinstance(name,str):
@@ -31,7 +31,11 @@ STR {(full_dot)*strength}{(empty_dot)*(10-strength)}
 INT {(full_dot)*intel}{(empty_dot)*(10-intel)}
 CHA {(full_dot)*charisma}{(empty_dot)*(10-charisma)}""")
 
-print(create_character("ハルジオン",1,2,4))
+input_name = input("Enter your character's name: ")
+input_strength = int(input("Enter your character's strength (1-4): "))
+input_intel = int(input("Enter your character's intelligence (1-4): "))
+input_charisma = int(input("Enter your character's charisma (1-4): "))
+print(create_character(input_name,input_strength,input_intel,input_charisma))
 print("""
 
 

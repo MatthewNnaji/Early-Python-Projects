@@ -132,38 +132,16 @@ def login():
                 loginschema(Egypt1)
             elif Choice =="2":
                 resetpassword()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 def interface(borrowUser="Mango"):
     time.sleep(1)
@@ -202,38 +180,16 @@ def interface(borrowUser="Mango"):
         print("Understood! Loading the cup game....")
         time.sleep(1)
         cup_intro()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     
 
 def cup_intro():
     time.sleep(0.3)
@@ -266,16 +222,16 @@ def cup_intro():
     while ncup == 1:
         ncup=int(input("Invalid cup number. Cup number must be greater than one, please try again: "))
     cup_game(ncup)
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 def cup_looper(result):
     print("")
@@ -299,15 +255,16 @@ def cup_looper(result):
                     cup_intro()
             else:
                     interface(user)
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 def cup_game(cups=3):
     global cstreak,hstreak
@@ -394,7 +351,16 @@ def cup_game(cups=3):
         if cstreak > hstreak:
             hstreak = cstreak
         cup_looper(True)
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
                                  
 
